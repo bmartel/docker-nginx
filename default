@@ -11,14 +11,7 @@ server {
     }
 
     location / {
-        # First attempt to serve request as file, then
-        # as directory, then fall back to redirecting to index.html
-        try_files $uri $uri/ @root;
-    }
-
-    # If nginx can't find a file, fallback to the homepage.
-    location @root {
-        rewrite .* / redirect;
+        try_files $uri $uri/ /index.html;
     }
 
     include /etc/nginx/basic.conf;
