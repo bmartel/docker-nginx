@@ -1,4 +1,4 @@
-FROM nginx:1.10.2
+FROM nginx:1.15
 MAINTAINER Brandon Martel "brandonmartel@gmail.com"
 
 RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
